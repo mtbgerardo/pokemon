@@ -1,0 +1,29 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.pokemons{
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  width: 980px;
+}
+.pokemonCard {
+  background: #fff;
+  border-radius: 5px;
+  height: 200px;
+  margin: 10px;
+  width: 200px;
+}
+.pokemonImg img {
+  margin: 20px;
+  width: 100px;
+}
+.pokemonName {
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+}
+
