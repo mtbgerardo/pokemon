@@ -25,7 +25,7 @@ const PokemonsList = () => {
     return arr[6];
   };
 
-  //excelent search function the explain here https://www.freecodecamp.org/news/search-and-filter-component-in-reactjs/
+  //search function the explain here https://www.freecodecamp.org/news/search-and-filter-component-in-reactjs/
   const pokemonSearch = (pokemon) => {
     return pokemons.filter((pokemon) => {
         return searchParam.some((newPokemon) => {
