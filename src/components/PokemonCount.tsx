@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
-const PokemonCount = ({count}) => {
+const PokemonCount = ({count, search}) => {
   return (
     <div style={{ textAlign: "center", width: "100%" }}>
-      <p>Pokemons:{count}</p>
+      <p>{search.length !== 0 ? `Pokemons in Search: ${count}` : `Pokemons: ${count}`}</p>
     </div>
   );
 };

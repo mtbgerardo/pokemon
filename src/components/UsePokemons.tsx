@@ -14,7 +14,7 @@ export default function UsePokemons() {
   const [count, setCount] = useState<Count>(0);
   const [nextURL, setNextURL] = useState<Next>("")
   const [prevURL, setPrevURL] = useState<Previous>("")  
-  const [currentURL, setCurrentURL] = useState("https://pokeapi.co/api/v2/pokemon/")
+  const [currentURL, setCurrentURL] = useState(`https://pokeapi.co/api/v2/pokemon/`);
 
   useEffect(() => {
 
@@ -25,8 +25,8 @@ export default function UsePokemons() {
 
         setPokemons(data.results);
         setCount(data.count);
-        setNextURL(data.next)
-        setPrevURL(data.previous)
+        setNextURL(data.next);
+        setPrevURL(data.previous);
       
       } catch (error) {
         console.log(error.message);
@@ -45,13 +45,18 @@ export default function UsePokemons() {
     setCurrentURL(prevURL)
   }
 
+  const setURL = (url: string) => {
+    setCurrentURL(url)
+  }
+
   return {
     pokemons, 
     count, 
     goNext, 
     goPrev, 
     nextURL, 
-    prevURL
+    prevURL,
+    setURL
   };
 }
 

@@ -2,10 +2,6 @@ import React from 'react'
 
 export default function PokemonSearch({ pokemonFilter, search }) {
 
-  const onChangeSearch = (event) => {
-    pokemonFilter(event.target.value)
-  } 
-
   return (
     <>
     <form>
@@ -13,7 +9,7 @@ export default function PokemonSearch({ pokemonFilter, search }) {
         type="text"
         id="search"
         value={search}
-        onChange={onChangeSearch}
+        onChange={e =>  pokemonFilter(e.target.value)}
         placeholder="Search"
       />
     </form>
